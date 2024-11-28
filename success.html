@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success!</title>
+    <link rel="icon" href="./img/icons/t-space-logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="feedback-page">
+      <div class="feedback">
+        <h2>
+          Дякую! Наш менеджер обов'язково зв'яжеться з вами найближчим часом!
+        </h2>
+      </div>
+    </main>
+    <script>
+      const userAnswers = JSON.parse(localStorage.getItem("userAnswers"));
+      if (userAnswers) {
+        for (const question in userAnswers) {
+          console.log(`Питання - ${question}: ${userAnswers[question]}`);
+        }
+      }
+      const userData = JSON.parse(localStorage.getItem('userData'));
+      if (userData) {
+        for (const data in userData) {
+            console.log(`${data} - ${userData[data]}`);
+        }
+      }
+    </script>
+  </body>
+</html>
