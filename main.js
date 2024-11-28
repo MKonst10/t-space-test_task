@@ -118,6 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       createQuestion("Скільки часу ви могли б приділяти на день?");
       createTimeButtons();
+      scrollDown(200);
+
     };
 
     const handleButton2Click = () => {
@@ -131,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       createQuestion("Скільки часу ви могли б приділяти на день?");
       createTimeButtons();
+      scrollDown(200);
     };
 
     const handleButton3Click = () => {
@@ -144,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       createQuestion("Скільки часу ви могли б приділяти на день?");
       createTimeButtons();
+      scrollDown(200);
     };
 
     const button1 = document.createElement("button");
@@ -180,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Дякую! Наша компанія дуже зацікавлена вами, для подальшої підтримки зв'язку, будь ласка, заповніть форму."
       );
       createForm();
+      scrollDown(550);
     };
 
     const handleTwoHoursClick = () => {
@@ -190,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Дякую! Наша компанія дуже зацікавлена вами, для подальшої підтримки зв'язку, будь ласка, заповніть форму."
       );
       createForm();
+      scrollDown(550);
     };
 
     const handleFiveHoursClick = () => {
@@ -200,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Дякую! Наша компанія дуже зацікавлена вами, для подальшої підтримки зв'язку, будь ласка, заповніть форму."
       );
       createForm();
+      scrollDown(550);
     };
 
     const buttonHour = document.createElement("button");
@@ -334,8 +341,20 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "./success.html";
       }
     });
-
     formContainer.appendChild(form);
     chat.appendChild(formContainer);
+
+    setTimeout(() => {
+      formContainer.classList.add("visible");
+    }, 800)
+    
   }
+  
+
+  function scrollDown (height) {
+    window.scrollBy({
+      top: height,
+      behavior: "smooth",
+    });
+  };
 });
